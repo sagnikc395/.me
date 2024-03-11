@@ -1,8 +1,8 @@
 return {
-  'sainnhe/everforest',
-  priority = 1000,
+  'kepano/flexoki-neovim',
+  name = 'flexoki',
+  lazy = true,
   config = function()
-    vim.g.everforest_diagnostic_line_highlight = 1
-    vim.cmd [[colorscheme everforest]]
+    vim.cmd ' colorscheme flexoki-dark'
   end,
 }
