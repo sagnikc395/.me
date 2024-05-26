@@ -1,8 +1,8 @@
-theme = "kanagawa"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
-mouse = false 
+mouse = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -10,31 +10,5 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false 
+hidden = false
 
-[editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
-
-[editor.whitespace]
-render = "all"
-# or control each character
-#[editor.whitespace.render]
-#space = "all"
-#tab = "all"
-#nbsp = "none"
-#nnbsp = "none"
-#newline = "none"
-
-[editor.whitespace.characters]
-space = "·"
-nbsp = "⍽"
-nnbsp = "␣"
-tab = "→"
-newline = "⏎"
-tabpad = "·" # Tabs will look like "→···" (depending on tab width)
