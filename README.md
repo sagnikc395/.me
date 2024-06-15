@@ -1,3 +1,4 @@
-## 😇😤😭
+## .me 
 
-dotfiles for wezterm , neovim , tmux managed using chezmoi . 
+my dotfiles for wezterm, helix managed using chezmoi.
+
