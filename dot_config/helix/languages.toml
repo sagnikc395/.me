@@ -1,0 +1,14 @@
+[[languages]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript", "--printWidith", "100"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+
+[[languages]]
+name = "python"
+auto-format = true
