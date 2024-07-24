@@ -23,10 +23,10 @@ else
 fi
 
 # for making reproducible machines 
-brew install go node volta pnpm go chezmoi
+brew install go node volta pnpm  chezmoi 
 
-# martian-mono font 
+# monaspace fonts ftw 
 brew tap homebrew/cask-fonts
-brew install font-iosevka
+brew install font-monaspace
 
 
