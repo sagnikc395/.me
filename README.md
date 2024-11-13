@@ -1,4 +1,3 @@
 ## .me 
 
-my dotfiles for wezterm, helix managed using chezmoi.
-
+my dotfiles for wezterm, tmux and emacs managed by chezmoi.
