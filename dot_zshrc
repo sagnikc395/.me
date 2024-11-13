@@ -99,7 +99,6 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-alias pnpx='pnpm dlx'
 # pnpm end
 eval $(/opt/homebrew/bin/brew shellenv)
 
@@ -140,3 +139,7 @@ ssh-add --apple-use-keychain 2> /dev/null
 
 # opam configuration
 [[ ! -r /Users/sagnik3/.opam/opam-init/init.zsh ]] || source /Users/sagnik3/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+alias emacs='emacs &'

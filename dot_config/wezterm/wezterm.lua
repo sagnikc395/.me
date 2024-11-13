@@ -10,5 +10,5 @@ config.audible_bell = "Disabled"
 config.scrollback_lines = 10000
 config.window_close_confirmation = "NeverPrompt"
 
-
+config.enable_scroll_bar = true
 return config
