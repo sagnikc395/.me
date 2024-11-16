@@ -25,7 +25,6 @@
 (load-theme 'acme t)
 (setq acme-theme-black-fg t)
 
-(setq backup-directory-alist            '((".*" . "~/.Trash")))
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
