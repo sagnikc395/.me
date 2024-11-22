@@ -12,18 +12,28 @@
 
 (set-face-attribute 'default nil :font "CommitMono" :height 150)
 
+
+;;enable copying to clipboard
+(setq x-select-enable-clipboard t)
+
+
 ;;; I prefer cmd key for meta -> mac shenanigans 
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
+;; automatically complete brackets
+(electric-pair-mode t)
+
+
 ;; Display line numbers
 (global-display-line-numbers-mode 1)
 
 ;;theming and stuff
-(load-theme 'acme t)
-(setq acme-theme-black-fg t)
+;(load-theme 'acme t)
+;(setq acme-theme-black-fg t)
+(load-theme 'modus-vivendi-deuteranopia)
 
 (setq backup-directory-alist            '((".*" . "~/.Trash")))
 
@@ -39,7 +49,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(racket-mode company markdown-mode doom-modeline ivy acme-theme)))
+   '(acme-theme ample-theme company doom-modeline gruber-darker-theme ivy
+		markdown-mode modus-themes racket-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
