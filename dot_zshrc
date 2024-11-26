@@ -137,9 +137,9 @@ export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 ssh-add --apple-use-keychain 2> /dev/null
 
-# opam configuration
-[[ ! -r /Users/sagnik3/.opam/opam-init/init.zsh ]] || source /Users/sagnik3/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-alias emacs='emacs &'
+
+## emacs config
+alias em="/Applications/Emacs.app/Contents/MacOS/Emacs"

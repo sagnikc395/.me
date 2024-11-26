@@ -33,7 +33,8 @@
 ;;theming and stuff
 ;(load-theme 'acme t)
 ;(setq acme-theme-black-fg t)
-(load-theme 'modus-vivendi-deuteranopia)
+(load-theme 'modus-vivendi-deuteranopia t)
+
 
 (setq backup-directory-alist            '((".*" . "~/.Trash")))
 
@@ -48,9 +49,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("7b602fe4a324dc18877dde647eb6f2ff9352566ce16d0b888bfcb870d0abfd70" default))
  '(package-selected-packages
-   '(acme-theme ample-theme company doom-modeline gruber-darker-theme ivy
-		markdown-mode modus-themes racket-mode)))
+   '(acme-theme ample-theme company doom-modeline go-mode gruber-darker-theme ivy lsp-mode markdown-mode modus-themes racket-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -92,3 +94,11 @@
             (define-key racket-mode-map (kbd "<f5>") 'racket-run)))
 ;; smart parenthesis for lisp
 (require 'smartparens-config)
+
+
+(use-package lsp-mode
+    :hook (XXX-mode . lsp-deferred)
+    :commands (lsp lsp-deferred))
+
+(setq lsp-go-analyses '((shadow . t)
+                        (simplifycompositelit . :json-false)))
