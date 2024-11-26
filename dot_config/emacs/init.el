@@ -10,7 +10,7 @@
 ;; Set up the visible bell
 (setq visible-bell t)
 
-(set-face-attribute 'default nil :font "CommitMono" :height 150)
+(set-face-attribute 'default nil :font "CommitMono" :height 160)
 
 
 ;;enable copying to clipboard
@@ -33,7 +33,7 @@
 ;;theming and stuff
 ;(load-theme 'acme t)
 ;(setq acme-theme-black-fg t)
-(load-theme 'modus-vivendi-deuteranopia t)
+(load-theme 'spacemacs-dark t)
 
 
 (setq backup-directory-alist            '((".*" . "~/.Trash")))
@@ -52,7 +52,7 @@
  '(custom-safe-themes
    '("7b602fe4a324dc18877dde647eb6f2ff9352566ce16d0b888bfcb870d0abfd70" default))
  '(package-selected-packages
-   '(acme-theme ample-theme company doom-modeline go-mode gruber-darker-theme ivy lsp-mode markdown-mode modus-themes racket-mode)))
+   '(spacemacs-theme ample-theme company doom-modeline go-mode ivy lsp-mode markdown-mode modus-themes racket-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
