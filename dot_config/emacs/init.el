@@ -10,7 +10,7 @@
 ;; Set up the visible bell
 (setq visible-bell t)
 
-(set-face-attribute 'default nil :font "CommitMono" :height 160)
+(set-face-attribute 'default nil :font "Iosevka" :height 165)
 
 
 ;;enable copying to clipboard
