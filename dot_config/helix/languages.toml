@@ -1,0 +1,25 @@
+[[languages]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript", "--printWidith", "100"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+
+[[languages]]
+name = "python"
+auto-format = true
+[[languages-server.pylsp.config.pylsp]]
+plugins.ruff.enabled = true 
+plugins.black.enabled = true
+
+[[languages]]
+name = "go"
+config = { "formatting.gofumpt" = true, "build.buildFlags" = ["-tags=newfeature"] }
+
+[[languages]]
+name = "rust"
+config = {cachePriming.enable = false,diagnostics.experimental.enable = true}
