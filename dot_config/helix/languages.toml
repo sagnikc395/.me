@@ -17,9 +17,5 @@ plugins.ruff.enabled = true
 plugins.black.enabled = true
 
 [[languages]]
-name = "go"
-config = { "formatting.gofumpt" = true, "build.buildFlags" = ["-tags=newfeature"] }
-
-[[languages]]
 name = "rust"
 config = {cachePriming.enable = false,diagnostics.experimental.enable = true}
