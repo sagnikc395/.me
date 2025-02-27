@@ -1,5 +1,4 @@
-;; sagnik's emacs config
-;; date: 24/2/25
+;; sagnik's emacs config date: 24/2/25
 
 ;;don't show the splash screen
 (setq inhibit-startup-message t)
@@ -52,7 +51,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(exec-path-from-shell haskell-mode htmlize simple-httpd)))
+ '(package-selected-packages
+   '(pyenv-mode elpy corfu exec-path-from-shell haskell-mode htmlize simple-httpd)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -82,4 +82,6 @@
               (("C-c C-c" . haskell-compile))))
 
 
-;;agda setup
+;;python setup
+(elpy-enable)
+(pyenv-mode)
