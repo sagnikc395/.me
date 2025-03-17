@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = {}
 
-config.font = wezterm.font("Iosevka")
+config.font = wezterm.font("Input Mono")
 config.font_size = 16.5
 config.hide_tab_bar_if_only_one_tab = true
 local file = io.open(wezterm.config_dir .. "/colorscheme", "r")
