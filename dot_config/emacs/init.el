@@ -15,8 +15,8 @@
 (global-display-line-numbers-mode 1)
 
 ;;color theme - inbuilt
-(load-theme 'modus-vivendi :no-confirm)
-
+;(load-theme 'modus-vivendi :no-confirm)
+(load-theme 'nordic-night t)
 
 ;;rememeber recently edited files
 (recentf-mode 1)
@@ -33,7 +33,7 @@
 
 ;; font size setup
 (set-face-attribute 'default nil
-		    :height 180
+		    :height 170
 		    :family "Input Mono"
 		    :weight 'normal
 		    :width 'normal)
@@ -52,7 +52,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(rust-mode pyenv-mode elpy corfu exec-path-from-shell haskell-mode htmlize simple-httpd)))
+   '(nordic-night-theme go-mode pyenv-mode elpy corfu exec-path-from-shell htmlize simple-httpd)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -62,36 +62,10 @@
 (put 'downcase-region 'disabled nil)
 
 
-;;haskell setup
-
-(use-package eglot
-  :config
-  (add-hook 'haskell-mode-hook 'eglot-ensure)
-  :custom
-  (eglot-autoshutdown t)  ;; shutdown language server after closing last file
-  (eglot-confirm-server-initiated-edits nil)  ;; allow edits without confirmation
-  )
-
-(use-package exec-path-from-shell)
-(when (daemonp)
-  (exec-path-from-shell-initialize))
-
-;; C-c C-c key to compile the haskell binary
-(use-package haskell-mode
-  :bind (:map haskell-mode-map
-              (("C-c C-c" . haskell-compile))))
-
 
 ;;python setup
 (elpy-enable)
 (pyenv-mode)
-
-;;rust setup
-(add-hook 'rust-mode-hook 'eglot-ensure)
-(require 'eglot)
-(add-to-list 'eglot-server-programs
-             '((rust-ts-mode rust-mode) .
-               ("rustup" "run" "stable" "rust-analyzer" :initializationOptions (:check (:command "clippy")))))
 
 ;; corfu setup
    ;;;; Code Completion
@@ -130,3 +104,7 @@
                   (corfu-mode))
                 nil
                 t))
+
+;;go configure for lsp-mode
+(add-hook 'go-mode-hook 'lsp-deferred)
+
