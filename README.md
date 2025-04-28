@@ -1,5 +1,5 @@
 ## .me 
 
-my dotfiles for ghostty, wezterm and tmux managed by chezmoi.
+my dotfiles for ghostty, emacs and tmux managed by chezmoi.
 
 
