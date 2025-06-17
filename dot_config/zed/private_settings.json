@@ -11,13 +11,23 @@
     "diagnostics": false,
     "metrics": false
   },
-  "ui_font_family": "Input Mono",
+  "ui_font_family": "Atkinson Hyperlegible",
   "ui_font_size": 17,
-  "buffer_font_size": 17,
+  "buffer_font_family": "Iosevka Fixed",
+  "buffer_font_size": 18,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine"
+    "dark": "Gruvbox Dark Hard"
   },
-  "autosave": "on_focus_change"
+  "autosave": "on_focus_change",
+  "base_keymap": "VSCode",
+  "project_panel": {
+    "dock": "right"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff", "!pylsp", "!rope"]
+    }
+  }
 }

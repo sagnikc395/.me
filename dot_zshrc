@@ -91,15 +91,6 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-# pnpm
-export PNPM_HOME="/Users/sagnik3/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 eval $(/opt/homebrew/bin/brew shellenv)
 
 
@@ -115,6 +106,11 @@ eval $(/opt/homebrew/bin/brew shellenv)
 ## go debugger delve 
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
+
 
 # bun completions
 [ -s "/Users/sagnik3/.bun/_bun" ] && source "/Users/sagnik3/.bun/_bun"
@@ -122,10 +118,6 @@ export PATH="$GOPATH/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
 
 
 export PATH=$PATH:$HOME/go/bin
@@ -136,9 +128,10 @@ export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 ssh-add --apple-use-keychain 2> /dev/null
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+#pyenv to path
+eval "$(pyenv init --path)"
 
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
 
-## emacs config
-alias em="/Applications/Emacs.app/Contents/MacOS/Emacs"
+. "$HOME/.local/bin/env"
