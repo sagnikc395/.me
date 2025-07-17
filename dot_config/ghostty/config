@@ -1,6 +1,6 @@
 font-family = Input Mono
 font-style = Regular
-font-size = 15
+font-size = 17
 font-thicken = true
 
 cursor-style = block
@@ -13,13 +13,7 @@ confirm-close-surface = false
 clipboard-paste-protection = false
 unfocused-split-opacity = 1.0
 
-theme = iTerm2 Default
-background = #111111
-foreground = #f4f4ff
-cursor-color = #ff0078
+theme = flexoki-dark
 
 selection-background = 1d3c3b
 selection-foreground = eeeeee
-
-palette = 4=#3D52E2
-palette = 12=#344CFF

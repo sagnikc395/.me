@@ -1,4 +1,5 @@
-theme = "onedark"
+theme = "rose_pine_moon"
+
 
 [editor]
 line-number = "relative"

@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Min Icons",
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -18,7 +23,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
+    "dark": "Flexoki Dark"
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
@@ -27,7 +32,35 @@
   },
   "languages": {
     "Python": {
-      "language_servers": ["pyright", "ruff", "!pylsp", "!rope"]
+      "language_servers": ["pyright", "ruff", "!pylsp", "!rope"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true
+        },
+        "enable_lsp_tasks": true,
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        }
+      }
     }
   }
 }
