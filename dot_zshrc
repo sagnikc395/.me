@@ -73,7 +73,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node python vscode )
+plugins=(git node python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,14 +103,6 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-## go debugger delve 
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
-
 
 # bun completions
 [ -s "/Users/sagnik3/.bun/_bun" ] && source "/Users/sagnik3/.bun/_bun"
@@ -135,3 +127,7 @@ eval "$(pyenv init --path)"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 . "$HOME/.local/bin/env"
+export PATH="/Users/sagnik3/.pixi/bin:$PATH"
+
+# custom aliases
+alias ls='ls -al --color -h '
